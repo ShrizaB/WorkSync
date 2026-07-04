@@ -1,0 +1,23 @@
+{
+  "name": "worksync-backend",
+  "version": "1.0.0",
+  "description": "WorkSync HRM backend API (Express + SQLite) with a free Gemini-powered AI HR Assistant",
+  "type": "commonjs",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --no-warnings src/server.js",
+    "dev": "node --no-warnings --watch src/server.js",
+    "seed": "node --no-warnings src/db/init.js --reset"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
