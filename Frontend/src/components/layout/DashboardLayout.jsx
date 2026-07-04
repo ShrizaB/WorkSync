@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import AIAssistant from './AIAssistant';
 
 const DashboardLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -16,6 +17,7 @@ const DashboardLayout = ({ children }) => {
           </div>
         </main>
       </div>
+      <AIAssistant />
     </div>
   );
 };
