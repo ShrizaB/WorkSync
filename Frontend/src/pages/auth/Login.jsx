@@ -8,18 +8,18 @@ import { useAuth } from '../../hooks/useAuth';
 import toast from 'react-hot-toast';
 
 const schema = z.object({
-  email:    z.string().email('Enter a valid email'),
+  email: z.string().email('Enter a valid email'),
   password: z.string().min(3, 'Password must be at least 3 characters'),
 });
 
 const DEMO_ACCOUNTS = [
-  { label: 'Admin Demo',    email: 'admin@worksync.com',    password: 'admin123' },
+  { label: 'Admin Demo', email: 'admin@worksync.com', password: 'admin123' },
   { label: 'Employee Demo', email: 'employee@worksync.com', password: 'emp123' },
 ];
 
 const Login = () => {
   const { login } = useAuth();
-  const navigate   = useNavigate();
+  const navigate = useNavigate();
   const [showPw, setShowPw] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false); // Controls if login form modal is visible
@@ -53,7 +53,7 @@ const Login = () => {
         </div>
 
         {/* Small/Medium Login Button */}
-        <button 
+        <button
           onClick={() => setShowModal(true)}
           className="px-5 py-2 rounded-full bg-warm-900 hover:bg-warm-800 text-white text-sm font-semibold transition-colors shadow-pill"
         >
@@ -78,7 +78,7 @@ const Login = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-6xl px-6 lg:px-16 flex flex-col justify-center min-h-[70vh]">
-        
+
         <h1 className="text-5xl lg:text-7xl font-bold text-warm-900 leading-[1.1] mb-6 max-w-2xl">
           HR Management<br />
           <span className="gradient-text">That Works For You</span>
@@ -110,10 +110,10 @@ const Login = () => {
       {/* Login Modal Overlay */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-warm-900/40 backdrop-blur-sm p-4 animate-fade-in">
-          
+
           <div className="bg-white rounded-3xl w-full max-w-md p-8 relative shadow-card-lg animate-slideUp">
-            
-            <button 
+
+            <button
               onClick={() => setShowModal(false)}
               className="absolute top-5 right-5 p-2 rounded-full bg-warm-50 text-warm-400 hover:text-warm-900 hover:bg-warm-100 transition-colors"
             >
